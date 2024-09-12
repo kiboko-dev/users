@@ -1,0 +1,786 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:2111'
+paths:
+  /api/test:
+    get:
+      summary: ''
+      operationId: getApiTest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+  /api/users/deleted:
+    get:
+      summary: 'Корзина пользователей'
+      operationId: ''
+      description: 'Возвращает список удалённых пользователей'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: null
+                    phone: null
+                    lastName: null
+                    name: 'Judd Kshlerin'
+                    middleName: null
+                    email: arempel@example.org
+                    deleted: false
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      phone:
+                        type: string
+                        example: null
+                      lastName:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: 'Judd Kshlerin'
+                      middleName:
+                        type: string
+                        example: null
+                      email:
+                        type: string
+                        example: arempel@example.org
+                      deleted:
+                        type: boolean
+                        example: false
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      security: []
+  /api/users/bulkDelete:
+    post:
+      summary: 'Удалить несколько пользователей'
+      operationId: ''
+      description: 'Удаляет нескольких пользователей в корзину с возможностью восстановления'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  description: 'Массив из ID пользователей'
+                  example:
+                    - 5db01bb1-5667-4364-a1ec-a3ea28083522
+                    - de2b9e99-3995-41a1-b32a-069efd77dbc1
+                  items:
+                    type: string
+              required:
+                - ids
+      security: []
+  /api/users/bulkDestroy:
+    post:
+      summary: 'Удалить несколько пользователей полностью'
+      operationId: ''
+      description: 'Удаляет полностью из БД несколько пользователей'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  description: 'Массив из ID пользователей'
+                  example:
+                    - 5db01bb1-5667-4364-a1ec-a3ea28083522
+                    - de2b9e99-3995-41a1-b32a-069efd77dbc1
+                  items:
+                    type: string
+              required:
+                - ids
+      security: []
+  /api/users/bulkRestore:
+    post:
+      summary: 'Восстановить несколько пользователей'
+      operationId: ''
+      description: 'Восстанавливает несколько пользователей из корзины'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  description: 'Массив из ID пользователей'
+                  example:
+                    - 5db01bb1-5667-4364-a1ec-a3ea28083522
+                    - de2b9e99-3995-41a1-b32a-069efd77dbc1
+                  items:
+                    type: string
+              required:
+                - ids
+      security: []
+  /api/users:
+    get:
+      summary: 'Список пользователей'
+      operationId: ''
+      description: 'Возвращает список активных пользователей'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: null
+                    phone: null
+                    lastName: null
+                    name: 'Kristin Walter'
+                    middleName: null
+                    email: aubrey94@example.com
+                    deleted: false
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      phone:
+                        type: string
+                        example: null
+                      lastName:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: 'Kristin Walter'
+                      middleName:
+                        type: string
+                        example: null
+                      email:
+                        type: string
+                        example: aubrey94@example.com
+                      deleted:
+                        type: boolean
+                        example: false
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      security: []
+  '/api/users/{id}':
+    get:
+      summary: 'Показать пользователя'
+      operationId: ''
+      description: 'Возвращает информацию о пользователе'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: null
+                    phone: null
+                    lastName: null
+                    name: 'Maegan Pagac'
+                    middleName: null
+                    email: bgleason@example.com
+                    deleted: false
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      phone:
+                        type: string
+                        example: null
+                      lastName:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: 'Maegan Pagac'
+                      middleName:
+                        type: string
+                        example: null
+                      email:
+                        type: string
+                        example: bgleason@example.com
+                      deleted:
+                        type: boolean
+                        example: false
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      security: []
+    put:
+      summary: 'Редактировать пользователя'
+      operationId: ''
+      description: 'Изменяет доступные свойства пользователя'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: null
+                    phone: null
+                    lastName: null
+                    name: 'Trinity Beer'
+                    middleName: null
+                    email: etha83@example.net
+                    deleted: false
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      phone:
+                        type: string
+                        example: null
+                      lastName:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: 'Trinity Beer'
+                      middleName:
+                        type: string
+                        example: null
+                      email:
+                        type: string
+                        example: etha83@example.net
+                      deleted:
+                        type: boolean
+                        example: false
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lastName:
+                  type: string
+                  description: 'Фамилия пользователя'
+                  example: Иванов
+                name:
+                  type: string
+                  description: 'Имя пользователя'
+                  example: Иван
+                middleName:
+                  type: string
+                  description: 'Отчество пользователя'
+                  example: Иванович
+                email:
+                  type: string
+                  description: 'E-mail пользователя'
+                  example: ivanov@yandex.eu
+      security: []
+    delete:
+      summary: 'Удалить пользователя полностью'
+      operationId: ''
+      description: 'Удаляет пользователя из БД'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: ''
+        example: 5db01bb1-5667-4364-a1ec-a3ea28083522
+        required: true
+        schema:
+          type: uuid
+  '/api/users/{user}/delete':
+    delete:
+      summary: 'Удаление пользователя в корзину'
+      operationId: ''
+      description: 'Мягкое удаление пользователя с возможностью восстановления'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      security: []
+    parameters:
+      -
+        in: path
+        name: user
+        description: 'The user.'
+        example: 9cfaf903-fe11-4e71-9598-01fbb34e95e7
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: ''
+        example: 5db01bb1-5667-4364-a1ec-a3ea28083522
+        required: true
+        schema:
+          type: uuid
+  '/api/users/{user}/restore':
+    get:
+      summary: 'Восстановить пользователя'
+      operationId: ''
+      description: 'Восстановление пользователя из корзины'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Пользователи
+      security: []
+    parameters:
+      -
+        in: path
+        name: user
+        description: 'The user.'
+        example: 9cfaf903-fe11-4e71-9598-01fbb34e95e7
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: ''
+        example: 5db01bb1-5667-4364-a1ec-a3ea28083522
+        required: true
+        schema:
+          type: uuid
+  /api/auth/login:
+    post:
+      summary: Авторизация
+      operationId: ''
+      description: "Проверяет номер телефона и код из СМС. Так как отправка СМС не реализована,\n                           в качестве правильного кода принимает последние 4 цифры номера телефона."
+      parameters: []
+      responses:
+        200:
+          description: 'Возвращает токены для авторизации и время протухания токена'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    access_token: null
+                    refresh_token: null
+                    expires_in: null
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      access_token:
+                        type: string
+                        example: null
+                      refresh_token:
+                        type: string
+                        example: null
+                      expires_in:
+                        type: string
+                        example: null
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Регистрация|Авторизация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: 'Номер телефона пользователя'
+                  example: '89997008885'
+                code:
+                  type: string
+                  description: 'Код подтверждения'
+                  example: '8885'
+              required:
+                - phone
+      security: []
+  /api/auth/register:
+    post:
+      summary: Регистрация
+      operationId: ''
+      description: 'Регистрирует пользователя и возвращает его данные'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: null
+                    phone: null
+                    lastName: null
+                    name: 'Royal Kunze'
+                    middleName: null
+                    email: cara19@example.com
+                    deleted: false
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: null
+                      phone:
+                        type: string
+                        example: null
+                      lastName:
+                        type: string
+                        example: null
+                      name:
+                        type: string
+                        example: 'Royal Kunze'
+                      middleName:
+                        type: string
+                        example: null
+                      email:
+                        type: string
+                        example: cara19@example.com
+                      deleted:
+                        type: boolean
+                        example: false
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Регистрация|Авторизация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: 'Номер телефона пользователя'
+                  example: '89997000000'
+                lastName:
+                  type: string
+                  description: 'Фамилия пользователя'
+                  example: Иванов
+                name:
+                  type: string
+                  description: 'Имя пользователя'
+                  example: Иван
+                middleName:
+                  type: string
+                  description: 'Отчество пользователя'
+                  example: Иванович
+                email:
+                  type: string
+                  description: 'E-mail пользователя'
+                  example: ivanov@yandex.eu
+              required:
+                - phone
+                - lastName
+                - name
+                - middleName
+                - email
+      security: []
+  /api/auth/logout:
+    post:
+      summary: Выход
+      operationId: ''
+      description: 'Убивает токен авторизации'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: OK
+        400:
+          description: 'Bad request'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+        409:
+          description: Conflict
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Регистрация|Авторизация
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Пользователи
+    description: ''
+  -
+    name: Регистрация|Авторизация
+    description: ''

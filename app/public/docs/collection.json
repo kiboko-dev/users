@@ -1,0 +1,795 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/127.0.0.1:2111"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "57e13948-30d3-4739-8463-b2e2409aa83b",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/test",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/test",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/test"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u0421\u043f\u0438\u0441\u043a\u0438",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "\u041a\u043e\u0440\u0437\u0438\u043d\u0430 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/deleted",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/deleted"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0441\u043f\u0438\u0441\u043e\u043a \u0443\u0434\u0430\u043b\u0451\u043d\u043d\u044b\u0445 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\"data\":{\"id\":null,\"phone\":null,\"lastName\":null,\"name\":\"Judd Kshlerin\",\"middleName\":null,\"email\":\"arempel@example.org\",\"deleted\":false}}",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u0421\u043f\u0438\u0441\u043e\u043a \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0441\u043f\u0438\u0441\u043e\u043a \u0430\u043a\u0442\u0438\u0432\u043d\u044b\u0445 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\"data\":{\"id\":null,\"phone\":null,\"lastName\":null,\"name\":\"Kristin Walter\",\"middleName\":null,\"email\":\"aubrey94@example.com\",\"deleted\":false}}",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "5db01bb1-5667-4364-a1ec-a3ea28083522",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\"data\":{\"id\":null,\"phone\":null,\"lastName\":null,\"name\":\"Maegan Pagac\",\"middleName\":null,\"email\":\"bgleason@example.com\",\"deleted\":false}}",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041c\u0430\u0441\u0441\u043e\u0432\u044b\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/bulkDelete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/bulkDelete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"ids\":[\"5db01bb1-5667-4364-a1ec-a3ea28083522\",\"de2b9e99-3995-41a1-b32a-069efd77dbc1\"]}"
+                                },
+                                "description": "\u0423\u0434\u0430\u043b\u044f\u0435\u0442 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u0432 \u043a\u043e\u0440\u0437\u0438\u043d\u0443 \u0441 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c\u044e \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/bulkDestroy",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/bulkDestroy"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"ids\":[\"5db01bb1-5667-4364-a1ec-a3ea28083522\",\"de2b9e99-3995-41a1-b32a-069efd77dbc1\"]}"
+                                },
+                                "description": "\u0423\u0434\u0430\u043b\u044f\u0435\u0442 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0438\u0437 \u0411\u0414 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/bulkRestore",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/bulkRestore"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"ids\":[\"5db01bb1-5667-4364-a1ec-a3ea28083522\",\"de2b9e99-3995-41a1-b32a-069efd77dbc1\"]}"
+                                },
+                                "description": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439 \u0438\u0437 \u043a\u043e\u0440\u0437\u0438\u043d\u044b",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u044f",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "5db01bb1-5667-4364-a1ec-a3ea28083522",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"lastName\":\"\u0418\u0432\u0430\u043d\u043e\u0432\",\"name\":\"\u0418\u0432\u0430\u043d\",\"middleName\":\"\u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447\",\"email\":\"ivanov@yandex.eu\"}"
+                                },
+                                "description": "\u0418\u0437\u043c\u0435\u043d\u044f\u0435\u0442 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\"data\":{\"id\":null,\"phone\":null,\"lastName\":null,\"name\":\"Trinity Beer\",\"middleName\":null,\"email\":\"etha83@example.net\",\"deleted\":false}}",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:id",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "5db01bb1-5667-4364-a1ec-a3ea28083522",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "\u0423\u0434\u0430\u043b\u044f\u0435\u0442 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0438\u0437 \u0411\u0414",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0432 \u043a\u043e\u0440\u0437\u0438\u043d\u0443",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:user\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/:user\/delete",
+                                    "variable": [
+                                        {
+                                            "id": "user",
+                                            "key": "user",
+                                            "value": "9cfaf903-fe11-4e71-9598-01fbb34e95e7",
+                                            "description": "The user."
+                                        },
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "5db01bb1-5667-4364-a1ec-a3ea28083522",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "\u041c\u044f\u0433\u043a\u043e\u0435 \u0443\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0441 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c\u044e \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:user\/restore",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/users\/:user\/restore",
+                                    "variable": [
+                                        {
+                                            "id": "user",
+                                            "key": "user",
+                                            "value": "9cfaf903-fe11-4e71-9598-01fbb34e95e7",
+                                            "description": "The user."
+                                        },
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "5db01bb1-5667-4364-a1ec-a3ea28083522",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0438\u0437 \u043a\u043e\u0440\u0437\u0438\u043d\u044b",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "",
+                                    "name": ""
+                                },
+                                {
+                                    "header": [],
+                                    "code": 400,
+                                    "body": "",
+                                    "name": "Bad request"
+                                },
+                                {
+                                    "header": [],
+                                    "code": 409,
+                                    "body": "",
+                                    "name": "Conflict"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f|\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone\":\"89997008885\",\"code\":\"8885\"}"
+                        },
+                        "description": "\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u0442 \u043d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430 \u0438 \u043a\u043e\u0434 \u0438\u0437 \u0421\u041c\u0421. \u0422\u0430\u043a \u043a\u0430\u043a \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0430 \u0421\u041c\u0421 \u043d\u0435 \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u0430,\n                           \u0432 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435 \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u043e\u0434\u0430 \u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0435\u0442 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0435 4 \u0446\u0438\u0444\u0440\u044b \u043d\u043e\u043c\u0435\u0440\u0430 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"access_token\":null,\"refresh_token\":null,\"expires_in\":null}}",
+                            "name": "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0442\u043e\u043a\u0435\u043d\u044b \u0434\u043b\u044f \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0438 \u0438 \u0432\u0440\u0435\u043c\u044f \u043f\u0440\u043e\u0442\u0443\u0445\u0430\u043d\u0438\u044f \u0442\u043e\u043a\u0435\u043d\u0430"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "",
+                            "name": "Bad request"
+                        },
+                        {
+                            "header": [],
+                            "code": 409,
+                            "body": "",
+                            "name": "Conflict"
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone\":\"89997000000\",\"lastName\":\"\u0418\u0432\u0430\u043d\u043e\u0432\",\"name\":\"\u0418\u0432\u0430\u043d\",\"middleName\":\"\u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447\",\"email\":\"ivanov@yandex.eu\"}"
+                        },
+                        "description": "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u0435\u0442 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0438 \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0435\u0433\u043e \u0434\u0430\u043d\u043d\u044b\u0435",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":null,\"phone\":null,\"lastName\":null,\"name\":\"Royal Kunze\",\"middleName\":null,\"email\":\"cara19@example.com\",\"deleted\":false}}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "",
+                            "name": "Bad request"
+                        },
+                        {
+                            "header": [],
+                            "code": 409,
+                            "body": "",
+                            "name": "Conflict"
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0412\u044b\u0445\u043e\u0434",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "\u0423\u0431\u0438\u0432\u0430\u0435\u0442 \u0442\u043e\u043a\u0435\u043d \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u0438",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "OK",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "",
+                            "name": "Bad request"
+                        },
+                        {
+                            "header": [],
+                            "code": 409,
+                            "body": "",
+                            "name": "Conflict"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
